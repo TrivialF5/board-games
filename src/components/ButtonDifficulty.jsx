@@ -5,7 +5,7 @@ const ButtonDifficulty = ({
 }) => {
   return (
     <button 
-      className="flex-1 bg-violet-400 active:bg-violet-600 h-16 uppercase font-black text-xl"
+      className="flex-1 uppercase bg-purple-300 h-20 w-36 font-bold text-xl hover:bg-purple-500 active:bg-purple-800"
       onClick={onClick}
     >
       {children}

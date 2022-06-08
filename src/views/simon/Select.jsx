@@ -7,19 +7,19 @@ const Select = () => {
   const instrumentsOprions = [
     {
       instrument: "Piano",
-      color: "bg-blue-500",
-      colorLight: "bg-blue-400",
+      color: "bg-emerald-500",
+      colorLight: "bg-emerald-400",
       icon: <MdPiano />
     }, {
       instrument: "Violin",
-      color: "bg-orange-500",
-      colorLight: "bg-orange-400",
+      color: "bg-amber-500",
+      colorLight: "bg-amber-400",
       icon: <GiViolin />
     }
   ];
   return (
     <>
-      <div className="flex flex-col">
+      <section className="flex flex-col p-5 gap-3">
         {instrumentsOprions.map(instrument => (
           <Instrument
             key={instrument.instrument}
@@ -29,7 +29,7 @@ const Select = () => {
             icon={instrument.icon}
           />
         ))}
-      </div>
+      </section>
       <div className="flex fixed bottom-0 w-full">
         <ButtonDifficulty>Easy</ButtonDifficulty>
         <ButtonDifficulty>Medium</ButtonDifficulty>
