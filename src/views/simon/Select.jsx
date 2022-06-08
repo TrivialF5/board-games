@@ -1,6 +1,7 @@
 import Instrument from "../../components/Instrument"
 import { MdPiano } from "react-icons/md";
 import { GiViolin } from "react-icons/gi";
+import ButtonDifficulty from "../../components/ButtonDifficulty";
 
 const Select = () => {
   const instrumentsOprions = [
@@ -18,7 +19,6 @@ const Select = () => {
   ];
   return (
     <>
-      <div>Select</div>
       <div className="flex flex-col">
         {instrumentsOprions.map(instrument => (
           <Instrument
@@ -29,6 +29,11 @@ const Select = () => {
             icon={instrument.icon}
           />
         ))}
+      </div>
+      <div className="flex fixed bottom-0 w-full">
+        <ButtonDifficulty>Easy</ButtonDifficulty>
+        <ButtonDifficulty>Medium</ButtonDifficulty>
+        <ButtonDifficulty>Hard</ButtonDifficulty>
       </div>
     </>
   )
