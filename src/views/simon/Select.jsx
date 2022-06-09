@@ -5,6 +5,11 @@ import { GiHarp} from "react-icons/gi";
 import { GiDrumKit} from "react-icons/gi";
 import ButtonDifficulty from "../../components/ButtonDifficulty";
 import ButtonPlay from "../../components/ButtonPLay";
+import pianoIntro from "../../assets/audio/piano/pianoIntro.mp3";
+import violinIntro from "../../assets/audio/violin/violinIntro.mp3";
+import harpIntro from "../../assets/audio/harp/harpIntro.mp3";
+import drumsIntro from "../../assets/audio/drums/drumsIntro.mp3";
+
 
 const Select = () => {
   const instrumentsOprions = [
@@ -13,26 +18,26 @@ const Select = () => {
       color: "bg-emerald-500",
       colorLight: "bg-emerald-400",
       icon: <MdPiano />,
-      soundUrl: "https://drive.google.com/file/d/1Qjj_SCnfKPjaLAJSzYgYnkUdjDw4jjGa/view?usp=sharing",
+      soundUrl: pianoIntro,
     }, {
       instrument: "Violin",
       color: "bg-amber-500",
       colorLight: "bg-amber-400",
       icon: <GiViolin />,
-      soundUrl : "https://drive.google.com/file/d/1wrB3n0oktXfXThCfqwUHNG4-2KczRwmU/view?usp=sharing"
+      soundUrl : violinIntro,
     } , {
       instrument: "Harp",
       color: "bg-orange-500",
       colorLight: "bg-orange-400",
       icon: <GiHarp />,
-      soundUrl : "https://s17.aconvert.com/convert/p3r68-cdx67/7lnqt-y66pd.mp3"
+      soundUrl : harpIntro,
     } ,
     {
       instrument: "Drums",
       color: "bg-blue-500",
       colorLight: "bg-blue-400",
       icon: <GiDrumKit />,
-      soundUrl : "https://s31.aconvert.com/convert/p3r68-cdx67/y6ztl-rwy0t.mp3"
+      soundUrl : drumsIntro,
     }
   ];
 
