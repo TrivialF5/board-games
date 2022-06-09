@@ -7,7 +7,7 @@ export default function App() {
       <header>
         <TextTitle className="text-center" colorText="text-orange-500" title="Simon" highlightTitle="says" />
       </header>
-      <main>
+      <main className="min-h-screen">
         <Select />
       </main>
     </>

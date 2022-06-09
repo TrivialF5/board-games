@@ -4,6 +4,7 @@ import { GiViolin } from "react-icons/gi";
 import { GiHarp} from "react-icons/gi";
 import { GiDrumKit} from "react-icons/gi";
 import ButtonDifficulty from "../../components/ButtonDifficulty";
+import ButtonPlay from "../../components/ButtonPLay";
 
 const Select = () => {
   const instrumentsOprions = [
@@ -12,13 +13,13 @@ const Select = () => {
       color: "bg-emerald-500",
       colorLight: "bg-emerald-400",
       icon: <MdPiano />,
-      soundUrl: "https://s17.aconvert.com/convert/p3r68-cdx67/ufj48-jfy1r.mp3",
+      soundUrl: "https://drive.google.com/file/d/1Qjj_SCnfKPjaLAJSzYgYnkUdjDw4jjGa/view?usp=sharing",
     }, {
       instrument: "Violin",
       color: "bg-amber-500",
       colorLight: "bg-amber-400",
       icon: <GiViolin />,
-      soundUrl : "https://s19.aconvert.com/convert/p3r68-cdx67/719y3-8q03h.mp3"
+      soundUrl : "https://drive.google.com/file/d/1wrB3n0oktXfXThCfqwUHNG4-2KczRwmU/view?usp=sharing"
     } , {
       instrument: "Harp",
       color: "bg-orange-500",
@@ -48,6 +49,9 @@ const Select = () => {
             soundUrl={instrument.soundUrl}
           />
         ))}
+      </section>
+      <section className="h-full flex justify-center items-center pt-5">
+      <ButtonPlay />
       </section>
       <div className="flex fixed bottom-0 w-full">
         <ButtonDifficulty>Easy</ButtonDifficulty>
