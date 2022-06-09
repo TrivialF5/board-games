@@ -17,26 +17,26 @@ const Select = () => {
       instrument: "Piano",
       color: "bg-emerald-500",
       colorLight: "bg-emerald-400",
-      icon: <MdPiano />,
+      icon: <MdPiano className="h-7 w-7" />,
       soundUrl: pianoIntro,
     }, {
       instrument: "Violin",
       color: "bg-amber-500",
       colorLight: "bg-amber-400",
-      icon: <GiViolin />,
+      icon: <GiViolin className="h-7 w-7"/>,
       soundUrl : violinIntro,
     } , {
       instrument: "Harp",
       color: "bg-orange-500",
       colorLight: "bg-orange-400",
-      icon: <GiHarp />,
+      icon: <GiHarp className="h-7 w-7" />,
       soundUrl : harpIntro,
     } ,
     {
       instrument: "Drums",
       color: "bg-blue-500",
       colorLight: "bg-blue-400",
-      icon: <GiDrumKit />,
+      icon: <GiDrumKit className="h-7 w-7"/>,
       soundUrl : drumsIntro,
     }
   ];
