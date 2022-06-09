@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../../views/Home';
-import Select from '../../views/simon/Select';
+import Home from '../views/Home';
+import Select from '../views/simon/Select';
 
 const RoutesConfig = () => {
     return (

@@ -1,4 +1,4 @@
-import RoutesConfig from "./components/routes/RoutesConfig"
+import RoutesConfig from "./routes/RoutesConfig"
 import TextTitle from "./components/TextTitle"
 
 export default function App() {
