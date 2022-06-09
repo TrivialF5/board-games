@@ -5,7 +5,7 @@ export default function App() {
   return (
     <>
       <header>
-        <TextTitle className="text-center" colorText="text-blue-500" prevTitle="e" title="hola" highlightTitle="sñlidahf" />
+        <TextTitle className="text-center" colorText="text-orange-500" title="Simon" highlightTitle="says" />
       </header>
       <main>
         <RoutesConfig/>

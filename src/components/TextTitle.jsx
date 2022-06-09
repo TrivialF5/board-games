@@ -7,7 +7,7 @@ const TextTitle = ({
     className,
 }) => {
     return (
-        <p className={`font-semibold text-4xl ${className}`}>
+        <p className={`font-semibold text-4xl space-x-2 pt-5 ${className}`}>
             {prevTitle ? <span className={`${colorText}`}>{prevTitle}</span> : null}
             <span>{title}</span>
             {highlightTitle ? <span className={`${colorText}`}>{highlightTitle}</span> : null}
@@ -15,4 +15,4 @@ const TextTitle = ({
     )
 }
 
-export default TextTitle
+export default TextTitle ;
