@@ -9,14 +9,16 @@ const Select = () => {
       instrument: "Piano",
       color: "bg-emerald-500",
       colorLight: "bg-emerald-400",
-      icon: <MdPiano />
+      icon: <MdPiano />,
+      soundUrl: "https://s19.aconvert.com/convert/p3r68-cdx67/d88i9-6qlec.mp3",
     }, {
       instrument: "Violin",
       color: "bg-amber-500",
       colorLight: "bg-amber-400",
-      icon: <GiViolin />
+      icon: <GiViolin />,
     }
   ];
+
   return (
     <>
       <section className="flex flex-col p-5 gap-3">
@@ -27,6 +29,7 @@ const Select = () => {
             color={instrument.color}
             colorLight={instrument.colorLight}
             icon={instrument.icon}
+            soundUrl={instrument.soundUrl}
           />
         ))}
       </section>
