@@ -9,6 +9,7 @@ import pianoIntro from "../../assets/audio/piano/pianoIntro.mp3";
 import violinIntro from "../../assets/audio/violin/violinIntro.mp3";
 import harpIntro from "../../assets/audio/harp/harpIntro.mp3";
 import drumsIntro from "../../assets/audio/drums/drumsIntro.mp3";
+import TextTitle from "../../components/TextTitle";
 
 
 
@@ -44,6 +45,7 @@ const Select = () => {
 
   return (
     <>
+    <TextTitle />
       <section className="flex flex-col p-5 gap-3">
         {instrumentsOprions.map(instrument => (
           <Instrument

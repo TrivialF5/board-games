@@ -15,28 +15,38 @@ const Home = () => {
       {
         name: 'Simon',
         highlightName: 'Says',
-        color: 'text-emerald-500',
+        color: 'text-orange-400',
         path: '/simon',
         icon: simon,
-      }, {
-        name: 'Chess',
-        path: '/chess',
+      },
+      {
+        name: 'Simon',
+        highlightName: 'Says',
+        color: 'text-orange-400',
+        path: '/loading',
         icon: simon,
-      }
+      },  
+      
     ]
 
 
   return (
+    
     <div style={bgStyle}>
-      {gameOptions.map(game => (
-        <Game 
-          key={game.name}
-          path={game.path}
-          icon={game.icon}
-        >
-          <TextTitle title={game.name} highlightTitle={game.highlightName} colorText={game.color}/>
-        </Game>
-      ))}
+      <section className='flex justify-center '>
+        <TextTitle title/>
+      </section>
+      <section className='flex justify-center'>
+        {gameOptions.map(game => (
+          <Game 
+            key={game.name}
+            path={game.path}
+            icon={game.icon}
+          > 
+            <TextTitle className='text-xl' title={game.name} highlightTitle={game.highlightName} colorText={game.color}/>
+          </Game>
+        ))}
+      </section>
     </div>
   )
 }
