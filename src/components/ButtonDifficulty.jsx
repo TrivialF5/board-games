@@ -6,7 +6,7 @@ const ButtonDifficulty = ({
 }) => {
   return (
     <button 
-      className={`flex-1 h-20 text-xl font-bold uppercase w-36 hover:bg-purple-500 ${selected ? "bg-purple-500" : "bg-purple-300"}`}
+      className={`flex-1 h-20 text-xl font-bold uppercase w-36 hover:bg-purple-600 ${selected ? "bg-purple-500" : "bg-purple-300"}`}
       onClick={onClick}
     >
       {children}

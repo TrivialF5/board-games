@@ -1,9 +1,10 @@
 
-const PlaySimon = ({
-  
-}) => {
+const PlaySimon = () => {
+
   return (
-    <div>PlaySimon</div>
+    <>
+      <div>PlaySimon</div>
+    </>
   )
 }
 

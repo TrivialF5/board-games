@@ -1,11 +1,13 @@
 import { useState } from "react";
+import useSound from 'use-sound';
+
 import Instrument from "../../components/Instrument"
 import { MdPiano } from "react-icons/md";
 import { GiViolin } from "react-icons/gi";
 import { GiHarp} from "react-icons/gi";
 import { GiDrumKit} from "react-icons/gi";
 import ButtonDifficulty from "../../components/ButtonDifficulty";
-import ButtonPlay from "../../components/ButtonPLay";
+import ButtonPlay from "../../components/ButtonPlay";
 import pianoIntro from "../../assets/audio/piano/pianoIntro.mp3";
 import violinIntro from "../../assets/audio/violin/violinIntro.mp3";
 import harpIntro from "../../assets/audio/harp/harpIntro.mp3";
@@ -15,30 +17,32 @@ import drumsIntro from "../../assets/audio/drums/drumsIntro.mp3";
 
 const Select = () => {
   const [difficulty, setDifficulty] = useState("easy");
-  // const [selectedInstrument, setSelectedInstrument] = useState("piano");
+  const [playColor, setPlayColor] = useState("bg-slate-300");
+  const [selectedInstrument, setSelectedInstrument] = useState("piano");
+  const [sound, setSound] = useState(null);
   
   const instrumentsOprions = [
     {
-      instrument: "Piano",
+      instrument: "piano",
       color: "bg-emerald-500",
       colorLight: "bg-emerald-400",
       icon: <MdPiano className="h-7 w-7" />,
       soundUrl: pianoIntro,
     }, {
-      instrument: "Violin",
+      instrument: "violin",
       color: "bg-amber-500",
       colorLight: "bg-amber-400",
       icon: <GiViolin className="h-7 w-7"/>,
       soundUrl : violinIntro,
     } , {
-      instrument: "Harp",
+      instrument: "harp",
       color: "bg-orange-500",
       colorLight: "bg-orange-400",
       icon: <GiHarp className="h-7 w-7" />,
       soundUrl : harpIntro,
     } ,
     {
-      instrument: "Drums",
+      instrument: "drums",
       color: "bg-blue-500",
       colorLight: "bg-blue-400",
       icon: <GiDrumKit className="h-7 w-7"/>,
@@ -46,8 +50,21 @@ const Select = () => {
     }
   ];
 
+  const [play] = useSound(
+    sound,
+    { volume: 0.5 }
+  )
+
   const handleDifficulty = (difficulty) => {
     setDifficulty(difficulty);
+  }
+
+  const handleInstrument = (instrument) => {
+    setSelectedInstrument(instrument.instrument);
+    setPlayColor(instrument.colorLight);
+    setSound(instrument.soundUrl);
+    play();
+    console.log(instrument.soundUrl);
   }
 
   return (
@@ -61,11 +78,15 @@ const Select = () => {
             colorLight={instrument.colorLight}
             icon={instrument.icon}
             soundUrl={instrument.soundUrl}
+            onClick={() => handleInstrument(instrument)}
           />
         ))}
       </section>
       <section className="flex items-center justify-center h-full pt-5">
-      <ButtonPlay />
+        <ButtonPlay 
+          color={playColor}
+          to={`/simon/${selectedInstrument}/${difficulty}`}
+        />
       </section>
       <div className="fixed bottom-0 flex w-full">
         <ButtonDifficulty 
