@@ -10,11 +10,13 @@ const PlaySimon = () => {
   
   const createSequence = () => {
     const newSequence = [...sequence]
-    newSequence.push(Math.floor(Math.random() * 4))
+    newSequence.push(Math.floor(Math.random() * 4) + 1)
     setSequence(newSequence)
-    console.log(sequence)
-    setCount(count + 1)
   }
+
+  useEffect(() => {
+    setCount(count + 1)
+  }, [sequence])
   
   useEffect(() => {
     if (isPlaying === 'pc') {
@@ -29,6 +31,12 @@ const PlaySimon = () => {
 
   return (
     <>
+      <ul>
+        {sequence.map((selected, indice) => (
+          <li key={indice}>{selected}</li>
+        ))}
+      </ul>
+
       <div className="mt-20 mx-auto relative h-72 overflow-hidden border-8 border-black grid grid-cols-2 gap-2 bg-black rounded-full aspect-square">
         <ButtonSimon 
           value={1}
