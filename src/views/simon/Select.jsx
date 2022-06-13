@@ -85,7 +85,7 @@ const Select = () => {
       <section className="flex items-center justify-center h-full pt-5">
         <ButtonPlay 
           color={playColor}
-          to={`/simon/${selectedInstrument}/${difficulty}`}
+          to={`/simon/play/${selectedInstrument}/${difficulty}`}
         />
       </section>
       <div className="fixed bottom-0 flex w-full">
