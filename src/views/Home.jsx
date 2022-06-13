@@ -33,8 +33,8 @@ const Home = () => {
   return (
     
     <div style={bgStyle}>
-      <section className='flex justify-center '>
-        <TextTitle title/>
+      <section className='flex justify-center pt-20'>
+        <TextTitle prevTitle = 'e' title = 'Board' highlightTitle='Gaming' colorText = 'text-green-500' />
       </section>
       <section className='flex justify-center'>
         {gameOptions.map(game => (

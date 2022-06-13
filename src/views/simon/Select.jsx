@@ -45,19 +45,21 @@ const Select = () => {
 
   return (
     <>
-    <TextTitle />
-      <section className="flex flex-col p-5 gap-3">
-        {instrumentsOprions.map(instrument => (
-          <Instrument
-            key={instrument.instrument}
-            instrument={instrument.instrument}
-            color={instrument.color}
-            colorLight={instrument.colorLight}
-            icon={instrument.icon}
-            soundUrl={instrument.soundUrl}
-          />
-        ))}
-      </section>
+        <section className='flex justify-center pt-5'>
+          <TextTitle title= 'Simon' highlightTitle='Says' colorText= 'text-orange-400' />
+          </section>
+        <section className="flex flex-col p-5 gap-3">
+          {instrumentsOprions.map(instrument => (
+            <Instrument
+              key={instrument.instrument}
+              instrument={instrument.instrument}
+              color={instrument.color}
+              colorLight={instrument.colorLight}
+              icon={instrument.icon}
+              soundUrl={instrument.soundUrl}
+            />
+          ))}
+        </section>
       <section className="h-full flex justify-center items-center pt-5">
       <ButtonPlay />
       </section>

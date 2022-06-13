@@ -5,6 +5,7 @@ const TextTitle = ({
     highlightTitle,
     colorText,
     className,
+    space,
 }) => {
     return (
         <p className={`font-semibold text-4xl space-x-2 pt-5 ${className}`}>
