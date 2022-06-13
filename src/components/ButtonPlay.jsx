@@ -8,7 +8,7 @@ const ButtonPlay = ({
   return (
       
     <Link 
-      className={`flex items-center justify-center h-32 pl-5 text-4xl font-semibold uppercase border w-80 rounded-xl ${color}`}
+      className={`flex items-center justify-center h-32 text-4xl font-semibold uppercase border w-80 rounded-xl ${color}`}
       to={to}
     >
       play

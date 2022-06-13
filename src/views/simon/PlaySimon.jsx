@@ -15,7 +15,7 @@ const PlaySimon = () => {
     console.log(sequence)
     setCount(count + 1)
   }
-
+  
   useEffect(() => {
     if (isPlaying === 'pc') {
       createSequence()
@@ -53,7 +53,7 @@ const PlaySimon = () => {
         <Counter start={count}/>
       </div>
       <button 
-        className="flex items-center justify-center h-32 pl-5 text-4xl font-semibold uppercase border w-80 rounded-xl mx-auto mt-12 bg-slate-300" 
+        className="flex items-center justify-center h-32 text-4xl font-semibold uppercase border w-80 rounded-xl mx-auto mt-12 bg-slate-300" 
         onClick={() => setIsPlaying('pc')}>
         play
       </button>
