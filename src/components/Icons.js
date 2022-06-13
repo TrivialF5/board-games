@@ -1,27 +1,27 @@
-import { GiMusicalNotes } from "react-icons/gi";
+import { GiMusicalNotes } from 'react-icons/gi';
 
-<GiMusicalNotes />;
+  <GiMusicalNotes />
 
-import { IoIosMusicalNote} from "react-icons/io";
-import { IoIosMusicalNotes } from "react-icons/io";
+import { IoIosMusicalNote} from 'react-icons/io';
+import { IoIosMusicalNotes } from 'react-icons/io';
 
-<IoIosMusicalNote />;
-<IoIosMusicalNotes />;
+  <IoIosMusicalNote />
+<IoIosMusicalNotes />
 
-import { MdPiano } from "react-icons/md";
+import { MdPiano } from 'react-icons/md';
 
-<MdPiano />;
+  <MdPiano />
 
-import { GiViolin } from "react-icons/gi";
+import { GiViolin } from 'react-icons/gi';
 
-<GiViolin />;
+  <GiViolin />
 
-import { GiHarp} from "react-icons/gi";
+import { GiHarp} from 'react-icons/gi';
 
-<GiHarp />;
+  <GiHarp />
 
-import { GiDrumKit} from "react-icons/gi";
-import { GiDrum} from "react-icons/gi";
+import { GiDrumKit} from 'react-icons/gi';
+import { GiDrum} from 'react-icons/gi';
 
-<GiDrumKit />;
-<GiDrum />;
+  <GiDrumKit />
+<GiDrum />

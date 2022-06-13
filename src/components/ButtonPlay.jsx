@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 
 const ButtonPlay = ({
@@ -13,7 +13,7 @@ const ButtonPlay = ({
     >
       play
     </Link>
-  );
+  )
 }
 
-export default ButtonPlay; 
+export default ButtonPlay 
