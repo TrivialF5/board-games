@@ -21,9 +21,9 @@ const Loading = () => {
                 </section>
                 <section className='h-60 flex justify-center place-items-end '>
                         <IoIosMusicalNote className="h-20 w-20 animate-bounce " /> 
-                        <IoIosMusicalNotes className="h-20 w-20 animate-bounce" /> 
+                        <IoIosMusicalNotes className="h-20 w-20 motion-safe:animate-bounce" /> 
                          <IoIosMusicalNote className="h-20 w-20 animate-bounce" />
-                        <IoIosMusicalNotes className="h-20 w-20 animate-bounce" />
+                        <IoIosMusicalNotes className="h-20 w-20 motion-safe:animate-bounce" />
                 </section>
                 <section className='h-24 flex justify-center place-items-end'>
                         <MdPiano className="h-12 w-12" /> 
@@ -32,7 +32,7 @@ const Loading = () => {
                         <GiDrumKit className="h-12 w-12" />
                 </section>
                 <section className='flex justify-center pt-5'>
-                <TextTitle prevTitle = 'Play' title = 'with' highlightTitle='Us' colorText = 'text-orange-400' />
+                    <TextTitle prevTitle = 'Play' title = 'with' highlightTitle='Us' colorText = 'text-orange-400' />
                 </section>
             </>
 
