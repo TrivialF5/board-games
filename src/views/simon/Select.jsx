@@ -55,7 +55,7 @@ const Select = () => {
 
   useEffect(() => {
     play()
-  }, [play, sound])
+  }, [play])
 
   const handleDifficulty = (difficulty) => {
     setDifficulty(difficulty)
