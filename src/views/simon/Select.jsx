@@ -46,7 +46,7 @@ const Select = () => {
   const [difficulty, setDifficulty] = useState('easy')
   const [playColor, setPlayColor] = useState('bg-slate-300')
   const [selectedInstrument, setSelectedInstrument] = useState(null)
-  const [sound, setSound] = useState(null)
+  const [sound, setSound] = useState(pianoIntro)
 
   const [play] = useSound(
     sound,
@@ -54,17 +54,8 @@ const Select = () => {
   )
 
   useEffect(() => {
-    const instrumentSound = instrumentsOptions.find(instrument => instrument.instrument === selectedInstrument)
-    console.log('useEffect for selectedInstrument (instrumentSound):', instrumentSound)
-    // setSound(instrumentSound.soundUrl)
-    console.log('useEffect for selectedInstrument (sound):', sound)
-  }, [selectedInstrument])
-
-  useEffect(() => {
-    if (sound !== null) {
-      play()
-    }
-  }, [play])
+    play()
+  }, [play, sound])
 
   const handleDifficulty = (difficulty) => {
     setDifficulty(difficulty)
@@ -76,7 +67,7 @@ const Select = () => {
     setSound(instrument.soundUrl)
     console.log('handleInstrument:', instrument.soundUrl)
   }
-
+  
   return (
     <>
       <section className="flex flex-col gap-3 p-5">
