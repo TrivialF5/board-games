@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import useSound from 'use-sound'
 
 import Instrument from '../../components/Instrument'
@@ -12,48 +12,59 @@ import pianoIntro from '../../assets/audio/piano/pianoIntro.mp3'
 import violinIntro from '../../assets/audio/violin/violinIntro.mp3'
 import harpIntro from '../../assets/audio/harp/harpIntro.mp3'
 import drumsIntro from '../../assets/audio/drums/drumsIntro.mp3'
-
-
+  
+const instrumentsOptions = [
+  {
+    instrument: 'piano',
+    color: 'bg-emerald-500',
+    colorLight: 'bg-emerald-400',
+    icon: <MdPiano className="h-7 w-7" />,
+    soundUrl: pianoIntro,
+  }, {
+    instrument: 'violin',
+    color: 'bg-amber-500',
+    colorLight: 'bg-amber-400',
+    icon: <GiViolin className="h-7 w-7"/>,
+    soundUrl : violinIntro,
+  } , {
+    instrument: 'harp',
+    color: 'bg-orange-500',
+    colorLight: 'bg-orange-400',
+    icon: <GiHarp className="h-7 w-7" />,
+    soundUrl : harpIntro,
+  } ,
+  {
+    instrument: 'drums',
+    color: 'bg-blue-500',
+    colorLight: 'bg-blue-400',
+    icon: <GiDrumKit className="h-7 w-7"/>,
+    soundUrl : drumsIntro,
+  }
+]
 
 const Select = () => {
   const [difficulty, setDifficulty] = useState('easy')
   const [playColor, setPlayColor] = useState('bg-slate-300')
-  const [selectedInstrument, setSelectedInstrument] = useState('piano')
+  const [selectedInstrument, setSelectedInstrument] = useState(null)
   const [sound, setSound] = useState(null)
-  
-  const instrumentsOprions = [
-    {
-      instrument: 'piano',
-      color: 'bg-emerald-500',
-      colorLight: 'bg-emerald-400',
-      icon: <MdPiano className="h-7 w-7" />,
-      soundUrl: pianoIntro,
-    }, {
-      instrument: 'violin',
-      color: 'bg-amber-500',
-      colorLight: 'bg-amber-400',
-      icon: <GiViolin className="h-7 w-7"/>,
-      soundUrl : violinIntro,
-    } , {
-      instrument: 'harp',
-      color: 'bg-orange-500',
-      colorLight: 'bg-orange-400',
-      icon: <GiHarp className="h-7 w-7" />,
-      soundUrl : harpIntro,
-    } ,
-    {
-      instrument: 'drums',
-      color: 'bg-blue-500',
-      colorLight: 'bg-blue-400',
-      icon: <GiDrumKit className="h-7 w-7"/>,
-      soundUrl : drumsIntro,
-    }
-  ]
 
   const [play] = useSound(
     sound,
     { volume: 0.5 }
   )
+
+  useEffect(() => {
+    const instrumentSound = instrumentsOptions.find(instrument => instrument.instrument === selectedInstrument)
+    console.log('useEffect for selectedInstrument (instrumentSound):', instrumentSound)
+    // setSound(instrumentSound.soundUrl)
+    console.log('useEffect for selectedInstrument (sound):', sound)
+  }, [selectedInstrument])
+
+  useEffect(() => {
+    if (sound !== null) {
+      play()
+    }
+  }, [play])
 
   const handleDifficulty = (difficulty) => {
     setDifficulty(difficulty)
@@ -63,14 +74,13 @@ const Select = () => {
     setSelectedInstrument(instrument.instrument)
     setPlayColor(instrument.colorLight)
     setSound(instrument.soundUrl)
-    play()
-    console.log(instrument.soundUrl)
+    console.log('handleInstrument:', instrument.soundUrl)
   }
 
   return (
     <>
       <section className="flex flex-col gap-3 p-5">
-        {instrumentsOprions.map(instrument => (
+        {instrumentsOptions.map(instrument => (
           <Instrument
             key={instrument.instrument}
             instrument={instrument.instrument}

@@ -24,9 +24,8 @@ const PlaySimon = () => {
     }
   }, [isPlaying])
 
-
   const handleClick = (e) => {
-    console.log(e.target.value)
+    console.log(e.target)
   }
 
   return (
@@ -41,22 +40,26 @@ const PlaySimon = () => {
         <ButtonSimon 
           value={1}
           onClick={(e) => handleClick(e)}
-          color='emerald'
+          color='bg-emerald-400'
+          colorActive='bg-emerald-200'
         />
         <ButtonSimon 
           value={2}
           onClick={(e) => handleClick(e)}
-          color='orange'
+          color='bg-orange-400'
+          colorActive='bg-orange-200'
         />
         <ButtonSimon 
           value={3}
           onClick={(e) => handleClick(e)}
-          color='sky'
+          color='bg-sky-400'
+          colorActive='bg-sky-200'
         />
         <ButtonSimon 
           value={4}
           onClick={(e) => handleClick(e)}
-          color='amber'
+          color='bg-amber-400'
+          colorActive='bg-amber-200'
         />
         <Counter start={count}/>
       </div>
